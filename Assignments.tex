@@ -73,6 +73,48 @@
     That is, we want the polynomial to have the same values and derivatives as the function at the points. But the amount of derivatives change for every interpolating node. 
 \end{exercise}
 
-\begin{exercise} \textcolor{red}{In progress}
-    
+\begin{exercise}
+    For the matrix $A = [0.001, 1; 1, 1]$ and the vector $b = [1, 2]'$, 
+    \begin{enumerate}
+        \item Compute the condition number of $A$ for the $\ell_2$ norm (use the command cond(A) in Matlab) and solve the system $Ax=b$
+        \item Change the matrix $A$ and the data $b$ by two small random perturbations $\tilde{A}=A+\delta A$, $\tilde{b}=b+\delta b$, and solve the system $\tilde{A}\tilde{x}=\tilde{b}$.
+        \item If $\tilde{x} = x +\delta x$, compare the relative errors 
+        \begin{equation*}
+            \frac{||\delta A||}{||A||},\ \frac{||\delta b||}{||b||} \text{ and } \frac{||\delta x||}{||x||}.
+        \end{equation*}
+    \end{enumerate}
 \end{exercise}
+
+\begin{exercise}
+    For the matrix $A = [0.00000000000000000001, 1; 1, 1]$ and the vector $b = [1, 2]'$ repeat all the items in the previous exercise.
+\end{exercise}
+
+\begin{exercise}
+    For the matrix $A = [0.00000000000000000001, 1; 1, 1]$ and the vector $b = [1, 2]'$ solve the system $Ax=b$ using LU decomposition with and without pivot. If the exact solution of the system is $x=[1,1]$. Call $x_1$ the solution obtained with pivot and $x_2$ the solution obtained without pivot. Compare the relative errors 
+    \begin{equation*}
+        \frac{||x_1-x||}{||x||} \text{ and } \frac{||x_2-x||}{||x||}.
+    \end{equation*}
+    Why is there such a difference? The condition number has anything to do with this difference?
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Assignment 3} 
+
+\textbf{Instructions: }
+\begin{enumerate}
+    \item The assignment should be hand in on Brigthspace in only one file with the name ``YourSurname\_Assignment2.mlx''.
+    \item Every function should have an initial multiline comment where you explain what the function does, the inputs and the exact outputs. 
+    \item Every key step of the algorithm should be commented. If you also modified something from the standard algorithms, modiufications should be explained. 
+    \item You are allowed to ask any question that you have regarding the assignment to the instructor. 
+    \item You are allowed to work with other students in groups of at most 3 people. In case you do, you must in the end hand in your own code with the solutions and add at the beginning of your code the names of the students you worked with.
+\end{enumerate}
+
